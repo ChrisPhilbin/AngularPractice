@@ -7,4 +7,19 @@ import { Component } from '@angular/core'
 export class ServerComponent {
     serverId: number = 10;
     serverStatus: string = 'offline';
+
+    serverName: string = ""
+
+    enabled: boolean = false
+
+    buttonStatus: boolean = true
+
+    onUpdateServerName = (event) => {
+        this.serverName = event.target.value
+    }
+
+    handleButtonClick = () => {
+        this.serverName = ''
+    }
+
 }
